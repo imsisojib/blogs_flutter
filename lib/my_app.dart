@@ -39,10 +39,10 @@ class _MyAppState extends State<MyApp> {
               child: child!,
             );
           },
-          title: 'MuseIQ',
+          title: 'CrackTech',
           themeMode: ThemeMode.dark,
-          theme: buildDarkTheme(context),
-          initialRoute: Routes.homeScreen,
+          theme: buildLightTheme(context),
+          initialRoute: Routes.favouriteScreen,
           onGenerateRoute: RouterHelper.router.generator,
         );
       },
