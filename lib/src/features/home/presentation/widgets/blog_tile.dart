@@ -38,6 +38,7 @@ class BlogTile extends StatelessWidget{
                         imageUrl:
                         blog?.owner?.profileImage ?? "",
                         errorWidget: Icon(Icons.person),
+                        placeholder: Icon(Icons.person),
                       ),
                       SizedBox(
                         width: 8.w,
