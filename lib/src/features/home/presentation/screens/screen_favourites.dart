@@ -18,7 +18,10 @@ class ScreenFavourites extends StatelessWidget {
     return SafeArea(child: Scaffold(
       body: Consumer<ProviderBlogs>(
         builder: (_, providerBlogs, child) {
-          if (providerBlogs.blogs.isEmpty) {
+
+          List<Blog> blogs = providerBlogs.blogs.where((element) => element.isFav==true).toList();
+
+          if (blogs.isEmpty) {
             return Center(
               child: Text(
                 "Hey! Welcome 👋",
@@ -28,8 +31,6 @@ class ScreenFavourites extends StatelessWidget {
               ),
             );
           }
-
-          List<Blog> blogs = providerBlogs.blogs.where((element) => element.isFav==true).toList();
 
           return CustomScrollView(
             physics: const BouncingScrollPhysics(),
