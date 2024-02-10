@@ -54,4 +54,13 @@ class ProviderBlogs extends ChangeNotifier {
     }
 
   }
+
+  void searchBlogs(String value) {
+    if(value.isEmpty){
+      fetchBlogs();
+    }
+
+    _blogs = _blogs.where((element) => element.owner?.name?.toLowerCase().contains(value.toLowerCase())??false).toList();
+    notifyListeners();
+  }
 }

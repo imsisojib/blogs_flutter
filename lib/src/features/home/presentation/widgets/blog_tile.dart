@@ -47,7 +47,7 @@ class BlogTile extends StatelessWidget{
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Name: ${blog?.owner?.name}",
+                              "${blog?.owner?.name}",
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: theme.textTheme.bodyMedium?.copyWith(
